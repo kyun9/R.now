@@ -39,6 +39,11 @@
 			var pathname = window.location.pathname; /* '/'부터 오른쪽에 있는 모든 경로*/
 			var appCtx = pathname.substring(0, pathname.indexOf("/", 2));
 			var root = url + appCtx;
+			
+			console.log(url);
+			console.log(pathname);
+			console.log(appCtx);
+			console.log(root);
 
 			ws = new WebSocket('ws://'+root+'/replyEcho');
 
