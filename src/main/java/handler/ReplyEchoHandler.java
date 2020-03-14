@@ -1,4 +1,4 @@
-package com.project.rnow.handler;
+package handler;
  
 import java.util.ArrayList;
 import java.util.List;

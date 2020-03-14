@@ -5,13 +5,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-<title>웹 소켓 통신</title>
+<title>Right now</title>
 </head>
 <body>
+	<h1>R.now</h1>
+
+		
+	<a href="/rnow/login">로그인</a>
+	<a href="/rnow/register">회원가입</a>
+
 	<div>
 		<input type="text" id="messageinput">
 	</div>
-
 	<div>
 		<button onclick="openSocket();">Open</button>
 		<button onclick="send();">Send</button>
