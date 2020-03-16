@@ -33,11 +33,11 @@
 					share your email with anyone else.</small>
 			</div>
 			<div class="form-group">
-				<label>UserName</label> <input type="text" name = "name"
+				<label>NickName</label> <input type="text" name = "username"
 					class="form-control" placeholder="Enter name">
 			</div>
 			<div class="form-group">
-				<label>Password</label> <input type="password" name = "pwd" class="form-control"
+				<label>Password</label> <input type="password" name = "password" class="form-control"
 					 placeholder="Password">
 			</div>
 			<div class="form-group">
