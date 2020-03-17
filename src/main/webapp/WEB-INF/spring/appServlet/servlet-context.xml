@@ -36,5 +36,15 @@
 	<context:component-scan base-package="service" />
 	<context:component-scan base-package="handler" />
 
+	<!-- websocket handler -->
+	<beans:bean id="replyEchochoHandler" class="handler.ReplyEchoHandler" />
 
+	<websocket:handlers>
+		<websocket:mapping handler="replyEchochoHandler"
+			path="/replyEcho" />
+		<websocket:handshake-interceptors>
+			<beans:bean
+				class="org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor" />
+		</websocket:handshake-interceptors>
+	</websocket:handlers>
 </beans:beans>

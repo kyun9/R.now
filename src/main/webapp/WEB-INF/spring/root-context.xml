@@ -44,15 +44,4 @@
 		<constructor-arg index="0" ref="sqlSessionFactory"></constructor-arg>
 	</bean>
 
-	<!-- websocket handler -->
-	<bean id="replyEchochoHandler" class="handler.ReplyEchoHandler" />
-
-	<websocket:handlers>
-		<websocket:mapping handler="replyEchochoHandler"
-			path="/replyEcho" />
-		<websocket:handshake-interceptors>
-			<bean
-				class="org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor" />
-		</websocket:handshake-interceptors>
-	</websocket:handlers>
 </beans>
