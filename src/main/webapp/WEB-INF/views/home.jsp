@@ -14,7 +14,7 @@
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-
+<script src="/rnow/resources/js/chat.js"></script>
 <title>Right now</title>
 </head>
 <body>
