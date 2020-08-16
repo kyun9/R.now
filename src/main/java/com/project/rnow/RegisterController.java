@@ -6,14 +6,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import dao.RegisterDAO;
+import dao.UserDAO;
 import dto.User;
 import service.LoginUtil;
 
 @Controller
 public class RegisterController {
 	@Autowired
-	RegisterDAO dao;
+	UserDAO dao;
 	@Autowired
 	LoginUtil loginUtil;
 

@@ -35,6 +35,7 @@
 	<context:component-scan base-package="dto" />
 	<context:component-scan base-package="service" />
 	<context:component-scan base-package="handler" />
+	<context:component-scan base-package="interceptor" />
 
 	<!-- websocket handler -->
 	<beans:bean id="replyEchochoHandler" class="handler.ReplyEchoHandler" />
@@ -47,4 +48,18 @@
 				class="org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor" />
 		</websocket:handshake-interceptors>
 	</websocket:handlers>
+	
+	
+	<!-- 인터셉터 객체 생성 -->
+    <beans:bean id="authenticationInterceptor" class="interceptor.AuthenticationInterceptor">
+    </beans:bean>
+    <!-- Interceptor 설정 -->
+    <interceptors>
+        <interceptor>
+            <mapping path="/"/>
+            <beans:ref bean="authenticationInterceptor"/>
+        </interceptor>
+    </interceptors>
+
+
 </beans:beans>
