@@ -23,7 +23,7 @@
 	<!-- partial -->
 	<!-- 채팅 -->
 
-	<form action="/rnow/register" method ="POST">
+	<form action="/test/register" method ="POST">
 		<fieldset>
 			<legend>Register</legend>
 			<div class="form-group">

@@ -23,7 +23,7 @@
 	<!-- partial -->
 	<!-- 채팅 -->
 
-	<form action="/rnow/login" method="POST">
+	<form action="/test/rnow/login" method="POST">
 		<fieldset>
 			<legend>Login</legend>
 			<div class="form-group">
