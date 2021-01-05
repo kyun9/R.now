@@ -14,7 +14,7 @@
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="/rnow/resources/js/chat.js"></script>
+<script src="/test/resources/js/chat.js"></script>
 <title>Right now</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
 	<%@ include file="./partials/header.jsp"%>
 	<!-- partial -->
 	<!-- 채팅 -->
-	<div>
+	<!-- 	<div>
 		<input type="text" id="messageinput">
 	</div>
 	<div>
@@ -31,11 +31,51 @@
 		<button onclick="closeSocket();">close</button>
 	</div>
 
-	<div id="message"></div>
+	<div id="message"></div> -->
 
 
 
+	<!-- chat -->
+	<div class="card">
+		<div class="card-header"></div>
 
+		<div class="card-body" style="border: 1px solid #ccc; width: 100%">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<p class="h5" style="margin-top: 20px; margin-left: 20px;">채팅방</p>
+				</div>
+				<div class="panel-body">
+					<ul class="media-list">
+
+						<li class="media">
+
+							<div class="media-body">
+
+								<div class="media">
+									<div class="media-body " id="message"
+										style="overflow: scroll; width: 500px; height: 200px;"></div>
+								</div>
+
+							</div>
+						</li>
+
+					</ul>
+				</div>
+				<div class="panel-footer">
+					<div class="input-group">
+						<input type="text" class="form-control"
+							placeholder="Enter Message" id="messageinput" /> <span
+							class="input-group-btn">
+							<button class="btn btn-info" type="button" onclick="send();">SEND</button>
+						</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<!-- chat end -->
 
 
 	<!-- Optional JavaScript -->

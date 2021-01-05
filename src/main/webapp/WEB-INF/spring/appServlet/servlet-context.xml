@@ -30,15 +30,10 @@
 	</beans:bean>
 
 	<context:component-scan
-		base-package="com.project.rnow" />
-	<context:component-scan base-package="dao" />
-	<context:component-scan base-package="dto" />
-	<context:component-scan base-package="service" />
-	<context:component-scan base-package="handler" />
-	<context:component-scan base-package="interceptor" />
+		base-package="com.project.rnow.*" />
 
 	<!-- websocket handler -->
-	<beans:bean id="replyEchochoHandler" class="handler.ReplyEchoHandler" />
+	<beans:bean id="replyEchochoHandler" class="com.project.rnow.handler.ReplyEchoHandler" />
 
 	<websocket:handlers>
 		<websocket:mapping handler="replyEchochoHandler"
@@ -51,7 +46,7 @@
 	
 	
 	<!-- 인터셉터 객체 생성 -->
-    <beans:bean id="authenticationInterceptor" class="interceptor.AuthenticationInterceptor">
+    <beans:bean id="authenticationInterceptor" class="com.project.rnow.interceptor.AuthenticationInterceptor">
     </beans:bean>
     <!-- Interceptor 설정 -->
     <interceptors>

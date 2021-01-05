@@ -1,4 +1,4 @@
-package com.project.rnow;
+package com.project.rnow.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -6,16 +6,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import dao.UserDAO;
-import dto.User;
-import service.LoginUtil;
+import com.project.rnow.dao.UserDAO;
+import com.project.rnow.service.LoginService;
+import com.project.rnow.vo.UserVO;
 
 @Controller
 public class RegisterController {
 	@Autowired
 	UserDAO dao;
 	@Autowired
-	LoginUtil loginUtil;
+	LoginService service;
 
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public String getLogin() {
@@ -23,14 +23,14 @@ public class RegisterController {
 	}
 
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
-	public ModelAndView postLogin(User user) {
+	public ModelAndView postLogin(UserVO user) {
 		ModelAndView mav = new ModelAndView();
 
 		// Bcrypt 이용한 간단한 암호화
-		user.setPassword(loginUtil.getEncodedPassword(user.getPassword()));
-		
+		user.setUserPassword(service.getEncodedPassword(user.getUserPassword()));
+
 		System.out.println(
-				"email : " + user.getEmail() + " name : " + user.getUsername() + " pwd : " + user.getPassword());
+				"email : " + user.getUserEmail() + " name : " + user.getUserName() + " pwd : " + user.getUserPassword());
 
 		if (dao.insert(user)) {
 			System.out.println("회원 추가 완료");

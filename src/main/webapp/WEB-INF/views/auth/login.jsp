@@ -23,15 +23,15 @@
 	<!-- partial -->
 	<!-- 채팅 -->
 
-	<form action="/test/rnow/login" method="POST">
+	<form action="/test/login" method="POST">
 		<fieldset>
 			<legend>Login</legend>
 			<div class="form-group">
-				<label>Email</label> <input type="email" name ="email"
+				<label>Email</label> <input type="email" name ="userEmail"
 					class="form-control" placeholder="Enter email">
 			</div>
 			<div class="form-group">
-				<label>Password</label> <input type="password" name ="password"
+				<label>Password</label> <input type="password" name ="userPassword"
 					class="form-control" placeholder="Enter password">
 			</div>
 			

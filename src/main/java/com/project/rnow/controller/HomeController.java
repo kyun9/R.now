@@ -1,4 +1,4 @@
-package com.project.rnow;
+package com.project.rnow.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -25,7 +25,7 @@ public class HomeController {
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		String formattedDate = dateFormat.format(date);
 		model.addAttribute("serverTime", formattedDate );
-		System.out.println("session 확인  : "+ session.getAttribute("login"));
+		System.out.println("session 확인  : "+ session.getAttribute("user"));
 		return "home";
 	}
 	

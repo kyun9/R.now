@@ -27,17 +27,17 @@
 		<fieldset>
 			<legend>Register</legend>
 			<div class="form-group">
-				<label>Email address</label> <input type="email" name = "email"
+				<label>Email address</label> <input type="email" name = "userEmail"
 					class="form-control" placeholder="Enter email"> <small
 					id="emailHelp" class="form-text text-muted">We'll never
 					share your email with anyone else.</small>
 			</div>
 			<div class="form-group">
-				<label>NickName</label> <input type="text" name = "username"
+				<label>NickName</label> <input type="text" name = "userName"
 					class="form-control" placeholder="Enter name">
 			</div>
 			<div class="form-group">
-				<label>Password</label> <input type="password" name = "password" class="form-control"
+				<label>Password</label> <input type="password" name = "userPassword" class="form-control"
 					 placeholder="Password">
 			</div>
 			<div class="form-group">

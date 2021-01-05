@@ -1,6 +1,17 @@
 $(document).ready(function() {
+	// enter 처리
+	$('#messageinput').on('keydown', function(evt) {
+		if (evt.keyCode == 13 && $('#messageinput').val() != "") {
+			var msg = $('#messageinput').val();
+			ws.send(msg);
+			$('#messageinput').val('');
+		}
+	});
 	openSocket();
 })
+function scrollAdjust() {
+	$("#message").scrollTop($("#message")[0].scrollHeight);
+}
 
 var ws;
 var messages = document.getElementById("message");
@@ -42,11 +53,12 @@ function openSocket() {
 function send() {
 	var text = document.getElementById("messageinput").value;
 	ws.send(text);
-	text = "";
+	$('#messageinput').val('');
 }
 function closeSocket() {
 	ws.close();
 }
 function writeResponse(text) {
 	message.innerHTML += "<br/>" + text;
+	scrollAdjust();
 }

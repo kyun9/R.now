@@ -1,4 +1,4 @@
-package interceptor;
+package com.project.rnow.interceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,7 +17,7 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
 		// session 객체를 가져옴
 		HttpSession session = request.getSession();
 		// login처리를 담당하는 사용자 정보를 담고 있는 객체를 가져옴
-		Object obj = session.getAttribute("login");
+		Object obj = session.getAttribute("user");
 
 		System.out.println("pre handle........");
 		if (obj == null) {
