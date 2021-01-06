@@ -53,7 +53,9 @@
 		<property name="mapperLocations"
 			value="classpath:/mappers/*Mapper.xml" />
 	</bean>
-
+	
+	<mybatis-spring:scan base-package="com/project/mapper"/>
+	
 	<bean id="sqlSession"
 		class="org.mybatis.spring.SqlSessionTemplate"
 		destroy-method="clearCache">

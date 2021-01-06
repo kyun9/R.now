@@ -8,7 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.project.rnow.dao.UserDAO;
 import com.project.rnow.service.LoginService;
 import com.project.rnow.vo.UserVO;
 
@@ -19,7 +18,6 @@ public class LoginController {
 	@Autowired
 	LoginService service;
 	@Autowired
-	UserDAO dao;
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String getLogin() {

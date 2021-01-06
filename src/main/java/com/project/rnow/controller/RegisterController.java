@@ -6,14 +6,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.project.rnow.dao.UserDAO;
+import com.project.mapper.UserSQL;
 import com.project.rnow.service.LoginService;
 import com.project.rnow.vo.UserVO;
 
 @Controller
 public class RegisterController {
 	@Autowired
-	UserDAO dao;
+	UserSQL userSQL;
 	@Autowired
 	LoginService service;
 
@@ -32,7 +32,7 @@ public class RegisterController {
 		System.out.println(
 				"email : " + user.getUserEmail() + " name : " + user.getUserName() + " pwd : " + user.getUserPassword());
 
-		if (dao.insert(user)) {
+		if (userSQL.insert(user)) {
 			System.out.println("회원 추가 완료");
 		} else {
 			System.out.println("회원 추가 실패");
