@@ -8,6 +8,8 @@
 
 * JNDI
 
+* Mapper Interface
+
   
 
 ![](./1.PNG)
@@ -43,5 +45,13 @@ WebSocketSession session에서 HttpSession 객체 가져오기
 */
 
 user = (UserVO) session.getAttributes().get("user");
+```
+
+
+
+```xml
+//root-context.xml
+
+<mybatis-spring:scan base-package="com/project/mapper"/>
 ```
 
